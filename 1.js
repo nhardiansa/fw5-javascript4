@@ -9,7 +9,7 @@ const palindromDetector = async () => {
       name: 'text',
       message: 'Masukan text'
     })
-  } while (!validator(answer.text))
+  } while (!validator(answer.text.trim()))
 
   const { text } = answer;
 
@@ -25,7 +25,7 @@ const palindromDetector = async () => {
 /*=============== validator input =============== */
 const validator = (input) => {
   if (input === '') {
-    console.log('Input tidak boleh kosong');
+    console.log('Masukan huruf atau angka');
     return false;
   }
 
