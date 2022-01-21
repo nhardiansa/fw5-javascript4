@@ -14,11 +14,10 @@ const reverseSentence = async () => {
 
   const { text } = answer;
 
-  console.log(mainProcess(text.trim()));
+  const result = mainProcess(text.trim())
+
+  console.log(result);
 }
-
-reverseSentence()
-
 
 /*=============== validator =============== */
 const validator = (input) => {
@@ -40,7 +39,6 @@ const validator = (input) => {
   return true
 }
 
-
 /*=============== pemrosesan kalimat =============== */
 const mainProcess = (str) => {
   let sentence = str
@@ -51,3 +49,5 @@ const mainProcess = (str) => {
 
   return sentence
 }
+
+reverseSentence()

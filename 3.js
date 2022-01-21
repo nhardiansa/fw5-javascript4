@@ -1,17 +1,18 @@
-// const number = BigInt(98123037221069457)
-const number = 5956560159466056
+const divideAndSort = (num) => {
 
-const text = number.toString().split('0')
+  let text = num.toString().split('0')
+  text = text.map(e => {
 
-const result = text.map(e => {
+    let text = e.split('')
+    text = text.sort()
+    text = text.join('')
 
-  let text = e.split('')
-  text = text.sort()
-  text = text.join('')
+    return text
+  })
 
-  return text
-})
+  text = parseInt( text.join('') )
 
-const fin = parseInt( result.join('') )
+  return text;
+}
 
-console.log(fin);
+console.log(divideAndSort(5956560159466056))
