@@ -1,0 +1,75 @@
+FUNCTION split(str, key)
+  length = str.length
+  dump = ""
+  result[]
+
+  FOR x=0; x <= length; x++
+    IF key == ""
+      idx = result.length
+      result[idx] = str[x]
+    ELSE IF x == length || str[x] == key
+      idx = result.length
+      result[idx] = dump
+      dump = ""
+    ELSE
+      dump += str[x]
+    ENDIF
+  ENDFOR
+
+  RETURN result[]
+ENDFUNCTION
+
+FUNCTION join(arr[], separator)
+  length = arr.length
+  dump = ""
+
+  FOR x=0; x < length; x++
+    IF x == 0
+      dump = arr[x]
+    ELSE IF separator
+      dump += separator + arr[x]
+    ELSE
+      dump += "," + arr[x]
+    ENDIF
+  ENDFOR
+
+  RETURN dump
+ENDFUNCTION
+
+FUNCTION sort(arr[])
+  dump[] = arr[]
+  n = dump.length
+  FOR x=1; x < n; x++
+    key = dump[x]
+    j = x-1;
+
+    WHILE j>=0 && dump[j] > key
+      dump[j+1] = dump[j]
+      j--
+    ENDWHILE
+
+    dump[j+1] = key
+  ENDFOR
+
+  RETURN dump
+ENDFUNCTION
+
+FUNCTION divideAndSort(num)
+  STRING text = num
+  arr[] = split(text, "0")
+  result = ""
+
+  FOR i=0; i < arr.length; i++
+    str[] = split(arr[i], "")
+    str[] = sort(str[])
+    result += join(str[], "")
+  ENDFOR
+
+  NUMBER fin = result
+
+  RETURN fin
+ENDFUNCTION
+
+NUMBER num = 5956560159466056
+result = divideAndSort(num)
+PRINT result
