@@ -1,6 +1,5 @@
 const { prompt } = require('enquirer');
 
-
 const reverseSentence = async () => {
   let answer;
 

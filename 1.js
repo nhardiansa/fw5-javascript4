@@ -37,24 +37,4 @@ const validator = (input) => {
   return true
 }
 
-// const askQuestion = async (type, question) => {
-//   try {
-//     let answer
-//     do {
-//       answer = await prompt({
-//         type: type,
-//         name: 'text',
-//         message: question
-//       })
-
-//     } while (!validator(answer.text))
-
-//     console.log(answer);
-
-//     return answer;
-//   } catch (err) {
-    
-//   }
-// }
-
 palindromDetector()
