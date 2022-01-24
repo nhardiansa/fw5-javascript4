@@ -1,5 +1,6 @@
-const split = (str, key) => {
+const split = (str, separator) => {
   const length = str.length
+  const key = separator
   let dump = "";
   const result = []
 
@@ -75,7 +76,8 @@ const divideAndSort = (num, separator) => {
   console.log(Number(result));
 }
 
-divideAndSort(5956560159466056, 0)
+// divideAndSort(5956560159466056, 0)
 // const number = 5956560159466056;
 // console.log(split('5956560159466056', '0'));
-// console.log(split('text', ''));
+// const text = split('text', '');
+// console.log(join(text, ''));

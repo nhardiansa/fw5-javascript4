@@ -1,5 +1,6 @@
-FUNCTION split(str, key)
+FUNCTION split(str, separator)
   length = str.length
+  key = separator
   dump = ""
   result[]
 
